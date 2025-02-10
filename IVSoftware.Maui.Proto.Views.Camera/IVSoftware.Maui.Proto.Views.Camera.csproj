@@ -24,7 +24,7 @@
 		<ApplicationTitle>Image Set</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.ivsoftware.maui.proto.views.camera</ApplicationId>
+		<ApplicationId>com.ivsoftware.maui.proto.views.camera.set</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -41,11 +41,11 @@
 	<PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
 		<IntermediateOutputPath>D:\Android.Intermediate\$(MSBuildProjectName)\obj\</IntermediateOutputPath>
 	</PropertyGroup>
-	
-	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">		
-	  <CodesignProvision>VS: WildCard Development</CodesignProvision>
-	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
+		<CodesignProvision>VS: WildCard Development</CodesignProvision>
+		<CodesignKey>Apple Development: Created via API (7RK5C47358)</CodesignKey>
+	</PropertyGroup>
 
 	<ItemGroup>
 		<!-- App Icon -->

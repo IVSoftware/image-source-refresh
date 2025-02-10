@@ -1,14 +1,16 @@
 I've been trying to do something similar, and have been seeing the same kinds of wonky behaviors. 
 
-You asked if:
+So, you asked if:
 
 > Anyone knows a workaround [...]?
 
-That's what this is, a workaround not a canonical answer. But I'm testing it and it seems really stable on these physical devices:
+That's what this is actually, a workaround not a canonical answer. But I'm testing it and it seems really stable on these physical devices:
 
 - Android 12
 - Android 13
 - iPhone11 (iOS 18)
+- iPhoneXR (iOS 17)
+- iPad
 - Windows Machine
 
 It consists of this extension:
@@ -26,17 +28,18 @@ static partial class Extensions
     }
 }
 ```
+___
 
 **Usage (Code-Behind)**
 
-This version came first, because I wanted to eliname any variables having to do with the binding of the ViewModel. In testing where I use _only_ a file path `FixedPathForTest` located (from your original post) at `Path.Combine(FileSystem.CacheDirectory,"kqeah1iq.yih")`. To apply the latest file update, the syntax is:
+This version came first, because I wanted to elinate any variables having to do with the binding of the ViewModel. In testing where I use _only_ a file path `FixedPathForTest` located (from your original post) at `Path.Combine(FileSystem.CacheDirectory,"kqeah1iq.yih")`. To apply the latest file update, the syntax is:
 
 `imagePhoto.Source = FixedPathForTest.Refresh();`
 
 ___
 
 
-Usage (ViewModel Binding)
+**Usage (ViewModel Binding)**
 
 ```xaml
 <Image
@@ -45,7 +48,7 @@ Usage (ViewModel Binding)
     Aspect="AspectFit"/>
 ```
 ___
-_It's important that the type of `Source` is `ImageSource` because even if you think it's a string, the "real" `ImageSource` is implicitly casted from it._
+_It's important that the type of `Source` is `ImageSource` because even if you think you are setting a string to it, the "real" `ImageSource` is implicitly casted from it._
 ___
 
 ```csharp
