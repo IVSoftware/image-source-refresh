@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:IVSoftware.Maui.Proto.Views.Camera"
+    xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.Maui.Controls"             
+    x:Class="IVSoftware.Maui.Proto.Views.Camera.MainPage">
+    <ScrollView>
+        <VerticalStackLayout
+          Padding="30,0"
+          Spacing="25">
+            <Image
+                x:Name ="imagePhoto"
+                HeightRequest="185"
+                Aspect="AspectFit"/>
+
+            <Label
+                x:Name="labelInfo"
+                FontSize="18"
+                HorizontalTextAlignment="Center" />
+
+            <Button
+                x:Name="buttonUpdateColorFile"
+                Text="Rotate Color" 
+                HorizontalOptions="Fill"
+                Clicked="OnRotateColor"/>
+
+            <Button
+                x:Name="buttonTakePhoto"
+                Text="Take Photo" 
+                HorizontalOptions="Fill"
+                Clicked="OnCaptureClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
