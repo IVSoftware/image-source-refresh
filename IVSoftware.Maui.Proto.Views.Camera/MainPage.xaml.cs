@@ -176,7 +176,7 @@ namespace IVSoftware.Maui.Proto.Views.Camera
                         appData = Path.Combine(
                             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                             "StackOverflow",
-                            "Image Bound");
+                            "Image Set");
                     }
                     else
                     {
